@@ -1,0 +1,165 @@
+export default function CockroachContentWebsite() {
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-black via-red-950 to-black">
+        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+          <img
+            src="https://i.imgur.com/xm9Qf8T.png"
+            alt="Cockroach Content Logo"
+            className="w-40 h-40 mx-auto rounded-full border-4 border-red-600 shadow-2xl"
+          />
+
+          <h1 className="text-5xl md:text-7xl font-extrabold mt-8 tracking-wide">
+            COCKROACH <span className="text-red-600">CONTENT</span>
+          </h1>
+
+          <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Viral. Trending. Unstoppable.
+            <br />
+            Surviving the internet daily with breaking news, movie updates,
+            savage posts, and viral entertainment.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <a
+              href="#content"
+              className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg transition"
+            >
+              Explore Content
+            </a>
+
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              className="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-2xl font-bold text-lg transition"
+            >
+              Follow Page
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">
+            About <span className="text-red-600">Cockroach Content</span>
+          </h2>
+
+          <p className="text-gray-300 text-lg leading-8">
+            Cockroach Content is a fast-growing digital entertainment and
+            trending news platform focused on viral internet culture,
+            entertainment updates, Indian trending stories, cinematic edits,
+            and engaging social content.
+          </p>
+
+          <p className="text-gray-400 mt-6 text-lg leading-8">
+            If it’s trending online, we’re already covering it.
+          </p>
+        </div>
+
+        <div className="bg-gradient-to-br from-red-700 to-black rounded-3xl p-10 shadow-2xl border border-red-500">
+          <div className="grid grid-cols-2 gap-6 text-center">
+            <div>
+              <h3 className="text-5xl font-extrabold text-red-500">20K+</h3>
+              <p className="text-gray-300 mt-2">Followers</p>
+            </div>
+
+            <div>
+              <h3 className="text-5xl font-extrabold text-red-500">Daily</h3>
+              <p className="text-gray-300 mt-2">Trending Updates</p>
+            </div>
+
+            <div>
+              <h3 className="text-5xl font-extrabold text-red-500">100%</h3>
+              <p className="text-gray-300 mt-2">Entertainment</p>
+            </div>
+
+            <div>
+              <h3 className="text-5xl font-extrabold text-red-500">🔥</h3>
+              <p className="text-gray-300 mt-2">Viral Energy</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Content Categories */}
+      <section id="content" className="bg-zinc-950 py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-14">
+            What We <span className="text-red-600">Cover</span>
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Breaking News',
+                desc: 'Fast updates on trending national and global stories.',
+              },
+              {
+                title: 'Movie & Celebrity Updates',
+                desc: 'Cinema edits, actor updates, and entertainment buzz.',
+              },
+              {
+                title: 'Viral Internet Content',
+                desc: 'Memes, savage posts, reels, and social trends.',
+              },
+              {
+                title: 'India Trending Stories',
+                desc: 'Popular discussions and viral moments across India.',
+              },
+              {
+                title: 'Social Media Trends',
+                desc: 'Latest viral trends from Instagram, Facebook & YouTube.',
+              },
+              {
+                title: 'Daily Entertainment',
+                desc: 'Fun, engaging and addictive content every day.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-black border border-red-800 hover:border-red-500 rounded-3xl p-8 shadow-xl transition hover:scale-105"
+              >
+                <h3 className="text-2xl font-bold text-red-500 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 leading-7">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 text-center bg-gradient-to-r from-red-900 via-black to-red-900 px-6">
+        <h2 className="text-5xl font-extrabold mb-6">
+          Join The <span className="text-red-500">Cockroach Army</span>
+        </h2>
+
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-8">
+          Follow Cockroach Content for nonstop viral entertainment, breaking
+          updates, trending stories, and internet madness.
+        </p>
+
+        <div className="mt-10">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            className="bg-red-600 hover:bg-red-700 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl transition"
+          >
+            Follow Now 🚀
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black border-t border-red-900 py-8 text-center text-gray-500">
+        <p>© 2026 Cockroach Content — Surviving The Internet Daily.</p>
+      </footer>
+    </div>
+  );
+}
