@@ -1,165 +1,145 @@
-export default function CockroachContentWebsite() {
-  return (
-    <div className="min-h-screen bg-black text-white font-sans">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-black via-red-950 to-black">
-        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cockroach Content</title>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
-          <img
-            src="https://i.imgur.com/xm9Qf8T.png"
-            alt="Cockroach Content Logo"
-            className="w-40 h-40 mx-auto rounded-full border-4 border-red-600 shadow-2xl"
-          />
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
 
-          <h1 className="text-5xl md:text-7xl font-extrabold mt-8 tracking-wide">
-            COCKROACH <span className="text-red-600">CONTENT</span>
-          </h1>
+    body{
+      background:black;
+      color:white;
+    }
 
-          <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Viral. Trending. Unstoppable.
-            <br />
-            Surviving the internet daily with breaking news, movie updates,
-            savage posts, and viral entertainment.
-          </p>
+    header{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(to bottom,#000,#300,#000);
+      padding:20px;
+    }
 
-          <div className="mt-10 flex flex-wrap gap-4 justify-center">
-            <a
-              href="#content"
-              className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg transition"
-            >
-              Explore Content
-            </a>
+    header img{
+      width:180px;
+      border-radius:50%;
+      border:4px solid red;
+      margin-bottom:20px;
+    }
 
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              className="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-2xl font-bold text-lg transition"
-            >
-              Follow Page
-            </a>
-          </div>
-        </div>
-      </section>
+    h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
 
-      {/* About Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 className="text-4xl font-bold mb-6">
-            About <span className="text-red-600">Cockroach Content</span>
-          </h2>
+    h1 span{
+      color:red;
+    }
 
-          <p className="text-gray-300 text-lg leading-8">
-            Cockroach Content is a fast-growing digital entertainment and
-            trending news platform focused on viral internet culture,
-            entertainment updates, Indian trending stories, cinematic edits,
-            and engaging social content.
-          </p>
+    p{
+      max-width:700px;
+      font-size:22px;
+      line-height:1.6;
+      color:#ccc;
+    }
 
-          <p className="text-gray-400 mt-6 text-lg leading-8">
-            If it’s trending online, we’re already covering it.
-          </p>
-        </div>
+    .btn{
+      margin-top:30px;
+      padding:15px 35px;
+      background:red;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+      font-size:20px;
+      font-weight:bold;
+    }
 
-        <div className="bg-gradient-to-br from-red-700 to-black rounded-3xl p-10 shadow-2xl border border-red-500">
-          <div className="grid grid-cols-2 gap-6 text-center">
-            <div>
-              <h3 className="text-5xl font-extrabold text-red-500">20K+</h3>
-              <p className="text-gray-300 mt-2">Followers</p>
-            </div>
+    section{
+      padding:80px 20px;
+      text-align:center;
+    }
 
-            <div>
-              <h3 className="text-5xl font-extrabold text-red-500">Daily</h3>
-              <p className="text-gray-300 mt-2">Trending Updates</p>
-            </div>
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:40px;
+    }
 
-            <div>
-              <h3 className="text-5xl font-extrabold text-red-500">100%</h3>
-              <p className="text-gray-300 mt-2">Entertainment</p>
-            </div>
+    .card{
+      background:#111;
+      padding:30px;
+      border:1px solid red;
+      border-radius:15px;
+    }
 
-            <div>
-              <h3 className="text-5xl font-extrabold text-red-500">🔥</h3>
-              <p className="text-gray-300 mt-2">Viral Energy</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    .card h2{
+      color:red;
+      margin-bottom:15px;
+    }
 
-      {/* Content Categories */}
-      <section id="content" className="bg-zinc-950 py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-14">
-            What We <span className="text-red-600">Cover</span>
-          </h2>
+    footer{
+      padding:20px;
+      text-align:center;
+      background:#111;
+      color:#777;
+    }
+  </style>
+</head>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Breaking News',
-                desc: 'Fast updates on trending national and global stories.',
-              },
-              {
-                title: 'Movie & Celebrity Updates',
-                desc: 'Cinema edits, actor updates, and entertainment buzz.',
-              },
-              {
-                title: 'Viral Internet Content',
-                desc: 'Memes, savage posts, reels, and social trends.',
-              },
-              {
-                title: 'India Trending Stories',
-                desc: 'Popular discussions and viral moments across India.',
-              },
-              {
-                title: 'Social Media Trends',
-                desc: 'Latest viral trends from Instagram, Facebook & YouTube.',
-              },
-              {
-                title: 'Daily Entertainment',
-                desc: 'Fun, engaging and addictive content every day.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-black border border-red-800 hover:border-red-500 rounded-3xl p-8 shadow-xl transition hover:scale-105"
-              >
-                <h3 className="text-2xl font-bold text-red-500 mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 leading-7">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<body>
 
-      {/* CTA Section */}
-      <section className="py-24 text-center bg-gradient-to-r from-red-900 via-black to-red-900 px-6">
-        <h2 className="text-5xl font-extrabold mb-6">
-          Join The <span className="text-red-500">Cockroach Army</span>
-        </h2>
+<header>
+  <img src="https://i.imgur.com/xm9Qf8T.png" alt="Logo">
 
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-8">
-          Follow Cockroach Content for nonstop viral entertainment, breaking
-          updates, trending stories, and internet madness.
-        </p>
+  <h1>COCKROACH <span>CONTENT</span></h1>
 
-        <div className="mt-10">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            className="bg-red-600 hover:bg-red-700 px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl transition"
-          >
-            Follow Now 🚀
-          </a>
-        </div>
-      </section>
+  <p>
+    Viral. Trending. Unstoppable.  
+    Breaking news, movie updates, trending topics,
+    savage posts and internet entertainment daily.
+  </p>
 
-      {/* Footer */}
-      <footer className="bg-black border-t border-red-900 py-8 text-center text-gray-500">
-        <p>© 2026 Cockroach Content — Surviving The Internet Daily.</p>
-      </footer>
+  <a class="btn" href="https://facebook.com">
+    Follow Now
+  </a>
+</header>
+
+<section>
+  <h1>What We Cover</h1>
+
+  <div class="cards">
+
+    <div class="card">
+      <h2>Breaking News</h2>
+      <p>Latest viral and trending updates.</p>
     </div>
-  );
-}
+
+    <div class="card">
+      <h2>Movie Updates</h2>
+      <p>Cinema and celebrity trending content.</p>
+    </div>
+
+    <div class="card">
+      <h2>Viral Content</h2>
+      <p>Internet trends, memes and savage posts.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Cockroach Content — Surviving The Internet Daily.
+</footer>
+
+</body>
+</html>
